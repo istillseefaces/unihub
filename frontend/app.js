@@ -29,3 +29,14 @@ const tasks = [
     }
 ]
 
+function searchSubjects(arr, id) {
+    if(Object.keys(arr).length === 0) {
+        return id;
+    } else {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].id === id) {
+                return arr[i];
+            }
+        }
+    }
+}
