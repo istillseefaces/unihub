@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f4ef" />
+    <title>UniHub — твой кампус, твои люди</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="feed">
+    <aside class="sidebar">
+      <a class="logo" href="index.html" aria-label="UniHub — главная">
+        uni<span>hub</span><i>✳</i>
+      </a>
+
+      <div class="campus">
+        <span class="campus-icon">U</span>
+        <div>
+          <b>Твой кампус</b>
+          <small>Алматы, Казахстан</small>
+        </div>
+        <span class="online-dot"></span>
+      </div>
+
+      <p class="nav-label">ТВОЁ ПРОСТРАНСТВО</p>
+
+      <nav>
+        <a class="nav-item active" href="index.html" aria-current="page">
+          <i data-icon="grid"></i>Лента кампуса<span class="nav-count">12</span>
+        </a>
+        <a class="nav-item" href="events.html">
+          <i data-icon="calendar"></i>События<span class="new-dot"></span>
+        </a>
+        <button class="nav-item" data-saved-toggle>
+          <i data-icon="bookmark"></i>Сохранённое
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="join-card">
+          <span>✦</span>
+          <h3>Большие идеи<br />начинаются с «привет»</h3>
+          <p>Найди своих людей.<br />Сделайте что-нибудь крутое.</p>
+          <a href="events.html">Найти событие <span>↗</span></a>
+        </div>
+
+        <div class="profile">
+          <div class="avatar avatar-orange">ТЫ</div>
+          <div>
+            <b>Привет, студент!</b>
+            <small>Твой новый семестр</small>
+          </div>
+          <span class="profile-star">✧</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div class="breadcrumb">Кампус <span>/</span> <b>Лента</b></div>
+
+        <label class="search">
+          <i data-icon="search"></i>
+          <input type="search" id="search" placeholder="Поиск по кампусу…" aria-label="Поиск постов" />
+          <kbd> / </kbd>
+        </label>
+
+        <a class="top-avatar" href="events.html" aria-label="Перейти к событиям">✳</a>
+      </header>
+
+      <main>
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow"><span></span> МЕСТО, ГДЕ ТЫ СВОЙ</div>
+            <h1>За пределами пар<span class="orange">.</span></h1>
+            <p>Люди, идеи и всё, ради чего хочется идти в универ.</p>
+          </div>
+          <span class="semester">ОСЕННИЙ СЕМЕСТР ’26 <span>↗</span></span>
+        </div>
+
+        <section class="hero">
+          <div class="hero-copy">
+            <span class="pill">НОВЫЙ СЕМЕСТР · НОВЫЕ СВЯЗИ</span>
+            <h2>Кампус — это люди.<br />Найди <em>своих.</em></h2>
+            <p>От спонтанного кофе до проекта мечты.<br />Всё начинается здесь.</p>
+            <a class="button button-dark" href="events.html">Что происходит в кампусе <span>↗</span></a>
+
+            <div class="hero-members">
+              <div class="avatar-stack">
+                <span>А</span>
+                <span>М</span>
+                <span>Д</span>
+                <span>С</span>
+              </div>
+              <p><b>1 240 студентов</b><br />уже на одной волне</p>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <span class="art-spark">✳</span>
+            <div class="sticker sticker-blue">let’s<br /><b>connect.</b><span>↗</span></div>
+            <div class="sticker sticker-cream">МЫСЛИ<br /><b>ШИРЕ</b><span>✷</span></div>
+            <div class="sticker sticker-orange">свои люди<br /><b>рядом :)</b></div>
+            <span class="art-note">less scrolling, more living</span>
+            <span class="little-star">✦</span>
+          </div>
+        </section>
+
+        <div class="content-columns">
+          <section class="feed-section">
+            <div class="section-heading">
+              <h2>Пульс кампуса <span class="live-dot"></span></h2>
+              <span class="muted">Только самое живое</span>
+            </div>
+
+            <div class="feed-toolbar">
+              <div class="tabs" role="group" aria-label="Категории постов">
+                <button class="selected" data-filter="all">Для тебя</button>
+                <button data-filter="study">Учёба</button>
+                <button data-filter="people">Ищу команду</button>
+                <button data-filter="life">Лайфстайл</button>
+              </div>
+
+              <button class="square-button" id="compose" aria-label="Написать пост">
+                <i data-icon="plus"></i>
+              </button>
+            </div>
+
+            <div id="posts">
+              <article class="post" data-category="people" data-id="team">
+                <div class="post-author">
+                  <div class="avatar avatar-purple">АМ</div>
+                  <div>
+                    <b>Алия Муратова</b>
+                    <small>Дизайн · 2 курс <span>· 25 минут назад</span></small>
+                  </div>
+                  <span class="tag tag-purple">Ищу команду</span>
+                </div>
+                <h3>Есть идея. Не хватает твоего таланта 👀</h3>
+                <p>
+                  Собираем команду на осенний хакатон! Делаем приложение, которое поможет студентам находить напарников для учёбы.
+                  Ищем фронтендера и человека, который любит питчить.
+                </p>
+                <div class="post-tags">
+                  <span>#хакатон</span>
+                  <span>#стартап</span>
+                  <span>#давайснами</span>
+                </div>
+                <div class="post-footer">
+                  <button class="like-button" aria-pressed="false" data-count="24">
+                    <i data-icon="heart"></i><span>24</span>
+                  </button>
+                  <span class="post-note">Открыта к новым знакомствам</span>
+                  <button class="save-button" aria-label="Сохранить пост" aria-pressed="false">
+                    <i data-icon="bookmark"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="post" data-category="study" data-id="study">
+                <div class="post-author">
+                  <div class="avatar avatar-green">ДС</div>
+                  <div>
+                    <b>Данияр Садыков</b>
+                    <small>Computer Science · 3 курс <span>· 1 час назад</span></small>
+                  </div>
+                  <span class="tag tag-green">Учёба</span>
+                </div>
+                <h3>Матан без боли? Да, это возможно.</h3>
+                <p>
+                  Собрал конспекты, понятные примеры и полезные ссылки за два семестра. В пятницу разберём сложные темы вместе в библиотеке.
+                  Приходи со своими вопросами ☕
+                </p>
+                <div class="study-banner">
+                  <div class="book-icon">∑</div>
+                  <div>
+                    <b>Study together, stress less.</b>
+                    <small>Пятница · 16:00 · Библиотека, 2 этаж</small>
+                  </div>
+                  <span>↗</span>
+                </div>
+                <div class="post-footer">
+                  <button class="like-button" aria-pressed="false" data-count="38">
+                    <i data-icon="heart"></i><span>38</span>
+                  </button>
+                  <span class="post-note">Учиться вместе проще</span>
+                  <button class="save-button" aria-label="Сохранить пост" aria-pressed="false">
+                    <i data-icon="bookmark"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article class="post" data-category="life" data-id="coffee">
+                <div class="post-author">
+                  <div class="avatar avatar-orange">СК</div>
+                  <div>
+                    <b>София Ким</b>
+                    <small>Маркетинг · 1 курс <span>· 2 часа назад</span></small>
+                  </div>
+                  <span class="tag tag-orange">Лайфстайл</span>
+                </div>
+                <h3>Перерыв — тоже часть расписания ☕</h3>
+                <p>
+                  Нашла тихий дворик за третьим корпусом. Берите кофе, пледы и друзей — там идеальное место, чтобы выдохнуть между парами.
+                </p>
+                <div class="post-footer">
+                  <button class="like-button" aria-pressed="false" data-count="17">
+                    <i data-icon="heart"></i><span>17</span>
+                  </button>
+                  <span class="post-note">Маленькие открытия кампуса</span>
+                  <button class="save-button" aria-label="Сохранить пост" aria-pressed="false">
+                    <i data-icon="bookmark"></i>
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <p class="empty-state" hidden>Пока ничего нет. Попробуй другую категорию или запрос.</p>
+          </section>
+
+          <aside class="right-rail">
+            <section class="upcoming">
+              <div class="section-heading">
+                <h2>Не пропусти</h2>
+                <a href="events.html" aria-label="Все события">↗</a>
+              </div>
+
+              <a href="events.html#open-mic" class="mini-event">
+                <div class="date-box">
+                  <small>СЕН</small>
+                  <b>18</b>
+                </div>
+                <div>
+                  <span class="event-type">МУЗЫКА & ЛЮДИ</span>
+                  <h3>Open Mic Night</h3>
+                  <p>18:00 · Коворкинг</p>
+                </div>
+                <span>↗</span>
+              </a>
+
+              <a href="events.html#design" class="mini-event">
+                <div class="date-box purple">
+                  <small>СЕН</small>
+                  <b>22</b>
+                </div>
+                <div>
+                  <span class="event-type">ВОРКШОП</span>
+                  <h3>Дизайн без границ</h3>
+                  <p>15:00 · Аудитория 304</p>
+                </div>
+                <span>↗</span>
+              </a>
+
+              <a class="text-link" href="events.html">Все события <span>→</span></a>
+            </section>
+
+            <section class="community-card">
+              <div class="community-art" aria-hidden="true">
+                <span>✳</span>
+                <span>↗</span>
+                <span>☺</span>
+              </div>
+              <span class="eyebrow">ВМЕСТЕ ИНТЕРЕСНЕЕ</span>
+              <h2>Твои интересы.<br />Твоя компания.</h2>
+              <p>Код, кино, спорт или настолки — для каждого найдётся повод встретиться.</p>
+              <a href="events.html" class="button button-outline">Найти компанию <span>↗</span></a>
+            </section>
+
+            <div class="rail-footer">
+              <a href="index.html">UniHub</a>
+              <span>Сделано для студенческой жизни.</span>
+              <small>© 2026 · Твой кампус онлайн</small>
+            </div>
+          </aside>
+        </div>
+
+        <footer class="page-footer">
+          <span>Меньше формальностей. Больше связей.</span>
+          <span>uni<span class="orange">hub</span> ✳</span>
+        </footer>
+      </main>
+    </div>
+
+    <dialog id="post-dialog">
+      <form id="post-form">
+        <div class="section-heading">
+          <h2>Что нового?</h2>
+          <button type="button" class="square-button" id="close-dialog" aria-label="Закрыть">×</button>
+        </div>
+        <p class="muted">Поделись идеей со своим кампусом.</p>
+
+        <label>
+          Заголовок
+          <input name="title" required maxlength="100" placeholder="С чего всё начинается…" />
+        </label>
+
+        <label>
+          Категория
+          <select name="category">
+            <option value="people">Ищу команду</option>
+            <option value="study">Учёба</option>
+            <option value="life">Лайфстайл</option>
+          </select>
+        </label>
+
+        <label>
+          Твой пост
+          <textarea name="body" required maxlength="1500" rows="5" placeholder="Расскажи чуть больше"></textarea>
+        </label>
+
+        <p class="demo-note">Деморежим: пост сохранится только в этом браузере.</p>
+        <button class="button button-dark" type="submit">Опубликовать <span>↗</span></button>
+      </form>
+    </dialog>
+
+    <div class="toast" role="status"></div>
+  </body>
+</html>
