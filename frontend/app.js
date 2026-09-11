@@ -5,7 +5,7 @@ const tasks = [
     description: "Complete Assignment 2" ,
     degree: "SCSM", 
     deadline: "2026-11-09"
-    }
+    },
     {
         id: 2,
         title: "Physics 2",
