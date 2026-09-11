@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f5f5f2" />
-    <title>UniHub — трекер заданий</title>
+    <meta name="theme-color" content="#f4f6f1" />
+    <title>UniHub — учебный трекер</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
@@ -18,7 +18,7 @@
         <span class="campus-icon">U</span>
         <div>
           <b>Мой кампус</b>
-          <small>Алматы, Казахстан</small>
+          <small>Город / университет</small>
         </div>
         <span class="online-dot"></span>
       </div>
@@ -40,16 +40,16 @@
       <div class="sidebar-bottom">
         <div class="join-card">
           <span>✓</span>
-          <h3>Проверено<br />на сегодня</h3>
-          <p>3 задания уже в работе.<br />Осталось 2 важных дедлайна.</p>
-          <a href="events.html">К календарю <span>↗</span></a>
+          <h3>План на сегодня</h3>
+          <p>Начни с главного.<br />Добавь задачи и держи всё под контролем.</p>
+          <a href="events.html">К расписанию <span>↗</span></a>
         </div>
 
         <div class="profile">
           <div class="avatar avatar-orange">ТЫ</div>
           <div>
             <b>Привет, студент!</b>
-            <small>3 курс · ИС</small>
+            <small>Твой профиль</small>
           </div>
           <span class="profile-star">✧</span>
         </div>
@@ -62,7 +62,7 @@
 
         <label class="search">
           <i data-icon="search"></i>
-          <input type="search" id="search" placeholder="Поиск по заданиям…" aria-label="Поиск заданий" />
+          <input type="search" id="search" placeholder="Поиск по задачам…" aria-label="Поиск задач" />
           <kbd> / </kbd>
         </label>
 
@@ -72,43 +72,43 @@
       <main>
         <div class="page-heading">
           <div>
-            <div class="eyebrow"><span></span> УЧЁБНЫЙ ПЛАН</div>
-            <h1>Твой день <span class="orange">в фокусе</span>.</h1>
-            <p>Задания, дедлайны и прогресс без лишнего шума.</p>
+            <div class="eyebrow"><span></span> Учебный трекер</div>
+            <h1>Держи всё <span class="orange">под контролем</span>.</h1>
+            <p>Планируй задания, дедлайны и учебный прогресс.</p>
           </div>
-          <span class="semester">СЕНТЯБРЬ 2026 <span>↗</span></span>
+          <span class="semester">СЕГОДНЯ <span>↗</span></span>
         </div>
 
         <section class="hero tracker-hero">
           <div class="hero-copy">
-            <span class="pill">СЕГОДНЯ</span>
-            <h2>7 задач,<br />3 в работе.</h2>
-            <p>Небольшой контрольный список<br />для продуктивного дня.</p>
+            <span class="pill">Пустой старт</span>
+            <h2>Сначала — план,<br />потом — успех.</h2>
+            <p>Эта страница — базовая заготовка для твоего трекера. Добавляй сюда карточки, задачи и расписание по мере роста проекта.</p>
 
             <div class="stats-row">
               <div class="mini-stat">
-                <span>Заданий</span>
-                <b>7</b>
+                <span>Задачи</span>
+                <b>0</b>
               </div>
               <div class="mini-stat">
                 <span>Выполнено</span>
-                <b>4</b>
+                <b>0</b>
               </div>
               <div class="mini-stat">
                 <span>Дедлайны</span>
-                <b>2</b>
+                <b>0</b>
               </div>
             </div>
           </div>
 
           <div class="hero-art tracker-art" aria-hidden="true">
             <div class="progress-ring">
-              <span>72%</span>
+              <span>0%</span>
             </div>
             <div class="track-list">
-              <span>Математика</span>
-              <span>Платформы</span>
-              <span>Дизайн</span>
+              <span>План</span>
+              <span>Задачи</span>
+              <span>Фокус</span>
             </div>
           </div>
         </section>
@@ -116,8 +116,8 @@
         <div class="content-columns">
           <section class="feed-section">
             <div class="section-heading">
-              <h2>Задания</h2>
-              <span class="muted">Сегодня</span>
+              <h2>Главная зона</h2>
+              <span class="muted">Пустой шаблон</span>
             </div>
 
             <div class="feed-toolbar">
@@ -128,96 +128,36 @@
                 <button data-filter="exam">Экзамены</button>
               </div>
 
-              <button class="square-button" id="compose" aria-label="Добавить задание">
+              <button class="square-button" id="compose" aria-label="Добавить задачу">
                 <i data-icon="plus"></i>
               </button>
             </div>
 
             <div id="posts">
-              <article class="post" data-category="study" data-id="math">
+              <article class="post placeholder-card" data-category="study" data-id="placeholder">
                 <div class="post-author">
-                  <div class="avatar avatar-green">М</div>
+                  <div class="avatar avatar-green">+</div>
                   <div>
-                    <b>Математика</b>
-                    <small>Лекция · 14:00</small>
+                    <b>Новая задача</b>
+                    <small>Добавьте название и дедлайн</small>
                   </div>
-                  <span class="tag tag-green">Сделать</span>
+                  <span class="tag tag-green">Новый</span>
                 </div>
-                <h3>Домашняя работа №4</h3>
-                <p>Решить задания 5–9, подготовить ответы к контрольным вопросам и отправить до 18:00.</p>
-                <div class="study-banner">
-                  <div class="book-icon">✓</div>
-                  <div>
-                    <b>Дедлайн: сегодня</b>
-                    <small>6 задач · 2 часа на проверку</small>
-                  </div>
-                  <span>↗</span>
-                </div>
-                <div class="post-footer">
-                  <button class="like-button" aria-pressed="false" data-count="12">
-                    <i data-icon="heart"></i><span>12</span>
-                  </button>
-                  <span class="post-note">Осталось 2 часа</span>
-                  <button class="save-button" aria-label="Сохранить" aria-pressed="false">
-                    <i data-icon="bookmark"></i>
-                  </button>
-                </div>
-              </article>
-
-              <article class="post" data-category="project" data-id="ui">
-                <div class="post-author">
-                  <div class="avatar avatar-purple">UI</div>
-                  <div>
-                    <b>Дизайн интерфейсов</b>
-                    <small>Проект · 3 этап</small>
-                  </div>
-                  <span class="tag tag-purple">В работе</span>
-                </div>
-                <h3>Макет мобильного приложения</h3>
-                <p>Доделать экран профиля, добавить состояния загрузки и собрать обратную связь от команды.</p>
+                <h3>Шаблон карточки</h3>
+                <p>Здесь будет описание вашей задачи, дедлайн, важные заметки или ссылка на материал.</p>
                 <div class="study-banner">
                   <div class="book-icon">✦</div>
                   <div>
-                    <b>Черновик готов</b>
-                    <small>Срок: завтра · 12:00</small>
+                    <b>Пустой блок</b>
+                    <small>Наполните содержимым</small>
                   </div>
                   <span>↗</span>
                 </div>
                 <div class="post-footer">
-                  <button class="like-button" aria-pressed="false" data-count="8">
-                    <i data-icon="heart"></i><span>8</span>
+                  <button class="like-button" aria-pressed="false" data-count="0">
+                    <i data-icon="heart"></i><span>0</span>
                   </button>
-                  <span class="post-note">Нужно 1 правка</span>
-                  <button class="save-button" aria-label="Сохранить" aria-pressed="false">
-                    <i data-icon="bookmark"></i>
-                  </button>
-                </div>
-              </article>
-
-              <article class="post" data-category="exam" data-id="cs">
-                <div class="post-author">
-                  <div class="avatar avatar-orange">CS</div>
-                  <div>
-                    <b>Алгоритмы</b>
-                    <small>Подготовка · 16:30</small>
-                  </div>
-                  <span class="tag tag-orange">Повтор</span>
-                </div>
-                <h3>Повтор к контрольной</h3>
-                <p>Сделать 10 задач на хеш-таблицы и сортировки, повторить теорию и пройти мини-тест.</p>
-                <div class="study-banner">
-                  <div class="book-icon">∑</div>
-                  <div>
-                    <b>Проверка в пятницу</b>
-                    <small>10 вопросов · 40 минут</small>
-                  </div>
-                  <span>↗</span>
-                </div>
-                <div class="post-footer">
-                  <button class="like-button" aria-pressed="false" data-count="5">
-                    <i data-icon="heart"></i><span>5</span>
-                  </button>
-                  <span class="post-note">Сделано 6/10</span>
+                  <span class="post-note">Пустой шаблон</span>
                   <button class="save-button" aria-label="Сохранить" aria-pressed="false">
                     <i data-icon="bookmark"></i>
                   </button>
@@ -231,32 +171,32 @@
           <aside class="right-rail">
             <section class="upcoming">
               <div class="section-heading">
-                <h2>Ближайшие дедлайны</h2>
+                <h2>Дедлайны</h2>
                 <a href="events.html" aria-label="Календарь">↗</a>
               </div>
 
-              <div class="mini-event">
+              <div class="mini-event empty-box">
                 <div class="date-box">
-                  <small>СЕН</small>
-                  <b>12</b>
+                  <small>ДАТА</small>
+                  <b>—</b>
                 </div>
                 <div>
-                  <span class="event-type">ДЕДЛАЙН</span>
-                  <h3>Матан</h3>
-                  <p>Домашка №4 · 18:00</p>
+                  <span class="event-type">ПУСТО</span>
+                  <h3>Добавьте важную дату</h3>
+                  <p>Дедлайн / событие / встреча</p>
                 </div>
                 <span>↗</span>
               </div>
 
-              <div class="mini-event">
+              <div class="mini-event empty-box">
                 <div class="date-box purple">
-                  <small>СЕН</small>
-                  <b>13</b>
+                  <small>ДАТА</small>
+                  <b>—</b>
                 </div>
                 <div>
-                  <span class="event-type">ПРОЕКТ</span>
-                  <h3>UI-дизайн</h3>
-                  <p>Проверка макета · 12:00</p>
+                  <span class="event-type">ПУСТО</span>
+                  <h3>Добавьте задачу</h3>
+                  <p>Мероприятие / проект / экзамен</p>
                 </div>
                 <span>↗</span>
               </div>
@@ -266,31 +206,31 @@
 
             <section class="community-card">
               <span class="eyebrow">ПРОГРЕСС</span>
-              <h2>Твои курсы.</h2>
+              <h2>Курсы</h2>
               <div class="course-list">
-                <div class="course-item">
+                <div class="course-item placeholder-course">
                   <span class="course-dot green"></span>
                   <div>
-                    <b>Математика</b>
-                    <small>72%</small>
+                    <b>Курс 1</b>
+                    <small>0%</small>
                   </div>
                 </div>
-                <div class="course-item">
+                <div class="course-item placeholder-course">
                   <span class="course-dot orange"></span>
                   <div>
-                    <b>Дизайн</b>
-                    <small>86%</small>
+                    <b>Курс 2</b>
+                    <small>0%</small>
                   </div>
                 </div>
-                <div class="course-item">
+                <div class="course-item placeholder-course">
                   <span class="course-dot blue"></span>
                   <div>
-                    <b>Алгоритмы</b>
-                    <small>64%</small>
+                    <b>Курс 3</b>
+                    <small>0%</small>
                   </div>
                 </div>
               </div>
-              <a href="events.html" class="button button-outline">Смотреть план <span>↗</span></a>
+              <a href="events.html" class="button button-outline">Добавить курс <span>↗</span></a>
             </section>
 
             <div class="rail-footer">
@@ -311,14 +251,14 @@
     <dialog id="post-dialog">
       <form id="post-form">
         <div class="section-heading">
-          <h2>Новое задание</h2>
+          <h2>Новая задача</h2>
           <button type="button" class="square-button" id="close-dialog" aria-label="Закрыть">×</button>
         </div>
-        <p class="muted">Добавь задачу, дедлайн и курс.</p>
+        <p class="muted">Добавьте название, тип и описание задания.</p>
 
         <label>
           Название
-          <input name="title" required maxlength="100" placeholder="Например: реферат по истории" />
+          <input name="title" required maxlength="100" placeholder="Например: Реферат по истории" />
         </label>
 
         <label>
