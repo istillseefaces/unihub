@@ -1,3 +1,6 @@
+const homework = "Homework";
+const exam = "Exam";
+
 const tasks = [
 {
     id: 1,
@@ -14,10 +17,10 @@ const tasks = [
         description: "Complete Assignment 3 in Notebook" ,
         degree: "SCSM",
         deadline: "2026-11-09",
-        catrgory: homework
+        category: homework
     }, 
     {
-        id: 15,
+        id: 3,
         title: "Physics 2",
         description: "Complete Assignment 3 in Notebook" ,
         degree: "SCSM",
