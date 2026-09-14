@@ -80,3 +80,16 @@ function calculateProgress(arr) {
     return progress;
 }
 
+function addNewTask(title, description, degree, deadline, category) {
+    const newTask = {
+        id: tasks.length + 1,
+        title: title,
+        description: description,
+        degree: degree,
+        deadline: deadline,
+        category: category,
+        completed: false
+    };
+    tasks.push(newTask);
+    }
+
