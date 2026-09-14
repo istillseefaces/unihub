@@ -54,3 +54,9 @@ function completeTask(arr, id) {
 function filterTaskByCategory(arr, category) {
     return arr.filter(task => task.category === category);
 }
+
+function filterTaskByCompletion(arr, completed) {
+    if(completed === true) {
+        return arr.filter(task => task.completed === true);
+    }
+}
