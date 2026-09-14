@@ -52,7 +52,5 @@ function completeTask(arr, id) {
 }
 
 function filterTaskByCategory(arr, category) {
-    if(Object.keys(arr).lenght === 0) {
-        return category;
-    }
+    return arr.filter(task => task.category === category);
 }
