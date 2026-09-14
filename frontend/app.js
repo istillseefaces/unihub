@@ -29,7 +29,7 @@ const tasks = [
     }
 ]
 
-function searchSubjects(arr, id) {
+function searchTasks(arr, id) {
     if(Object.keys(arr).length === 0) {
         return id;
     } else {
