@@ -58,3 +58,17 @@ function filterTaskByCategory(arr, category) {
 function filterTaskByCompletion(arr, completed) {
         return arr.filter(task => task.completed === completed);
     }
+
+function calculateProgress(aa) {
+    const allTasks = arr.length;
+
+    const completedTasks = filterTaskByCompletion(arr, true).completed
+
+
+    if(allTasks === 0) {
+        return 0;
+    }
+    const progress = (completestasls /allTasks) * 100;
+    return progress;
+}
+
