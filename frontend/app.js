@@ -93,3 +93,6 @@ function addNewTask(title, description, degree, deadline, category) {
     tasks.push(newTask);
     }
 
+function deleteTask(arr, id) {
+    const index = arr.length = searchTasks(arr, id);
+}
