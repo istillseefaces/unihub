@@ -47,6 +47,7 @@ function searchTasks(arr, id) {
 function completeTask(arr, id) {
     const task = searchTasks(arr, id);
         if (task) {
-        task.completed = true;
+        task.completed = !task.completed;
     }
 }
+
