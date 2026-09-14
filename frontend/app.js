@@ -11,6 +11,7 @@ const tasks = [
     category: homework,
     completed: false,
 
+
     },
     {
         id: 2,
@@ -29,7 +30,16 @@ const tasks = [
         deadline: "2026-11-09",
         category: exam,
         completed: false,
-    }
+    },
+    {
+    id: 4,
+    title: "Kazakh Language",
+    description: "Write an essay on the topic of 'My Country'" ,
+    degree: "CSS", 
+    deadline: "2026-11-09",
+    category: homework,
+    completed: false,
+    },
 ]
 
 function searchTasks(arr, id) {
@@ -61,9 +71,7 @@ function filterTaskByCompletion(arr, completed) {
 
 function calculateProgress(arr) {
     const allTasks = arr.length;
-
     const completedTasks = filterTaskByCompletion(arr, true).length
-
 
     if(allTasks === 0) {
         return 0;
