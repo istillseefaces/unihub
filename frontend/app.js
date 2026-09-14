@@ -8,7 +8,8 @@ const tasks = [
     description: "Complete Assignment 2" ,
     degree: "SCSM", 
     deadline: "2026-11-09",
-    category: homework
+    category: homework,
+    completed: false,
 
     },
     {
@@ -17,7 +18,8 @@ const tasks = [
         description: "Complete Assignment 3 in Notebook" ,
         degree: "SCSM",
         deadline: "2026-11-09",
-        category: homework
+        category: homework,
+        completed: false,
     }, 
     {
         id: 3,
@@ -25,7 +27,8 @@ const tasks = [
         description: "Complete Assignment 3 in Notebook" ,
         degree: "SCSM",
         deadline: "2026-11-09",
-        category: exam
+        category: exam,
+        completed: false,
     }
 ]
 
@@ -40,3 +43,4 @@ function searchTasks(arr, id) {
         }
     }
 }
+
