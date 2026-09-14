@@ -94,5 +94,16 @@ function addNewTask(title, description, degree, deadline, category) {
     }
 
 function deleteTask(arr, id) {
-    const index = arr.length = searchTasks(arr, id);
+    let index = -1;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].id === id) {
+            index = i;
+        }
+    }
+
+    if (index !== -1) {
+        arr.splice(index, 1);
+    }
 }
+
